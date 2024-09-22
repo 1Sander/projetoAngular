@@ -1,0 +1,10 @@
+<div class="task"
+    (dblclick)="onToggle(tarefa)"
+    [ngClass]="{reminder: tarefa.concluido}"
+>    
+    <h3>{{tarefa.tarefa}}
+        <!-- Substituindo o faTimes por mat-icon do Angular Material -->
+        <mat-icon (click)="onDelete(tarefa)" style="color: red; cursor: pointer;">close</mat-icon>
+    </h3>
+    <p>{{tarefa.categoria}}</p>
+</div>
